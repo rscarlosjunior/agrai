@@ -9,6 +9,7 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Box } from '@mui/material'
 import HowItWorksBox from '@/components/HowItWorksBox'
+import Numbers from '@/components/Numbers'
 
 export const Commerce: React.FC = () => {
   const { getPrismicByQuery } = usePrismicService()
@@ -23,6 +24,7 @@ export const Commerce: React.FC = () => {
             </Box>
             <Slogan/>
             <HowItWorksBox/>
+            <Numbers/>
           </Container>
           <Newsletter />
           <Footer />

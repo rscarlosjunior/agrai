@@ -81,7 +81,8 @@ function HowItWorksBox() {
                 display="flex"
                 flexDirection="column"
                 alignItems="center"
-                justifyContent="center"
+                justifyContent="flex-start"
+                height="80px"
               >
                 <Typography
                   textAlign="center"

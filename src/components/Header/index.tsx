@@ -21,8 +21,9 @@ export function Header() {
           <img src="https://imgur.com/dBwKZVv.png" height={50} alt="Agrai" />
           <IconWrapper>
             <IconSpacing>
-              {menuItem.map((item) => (
+              {menuItem.map((item,index) => (
                 <Typography
+                  key={index}
                   className="menu-hover"
                   fontWeight="300"
                   color="#7a7a7a"
