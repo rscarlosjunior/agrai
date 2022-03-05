@@ -16,6 +16,7 @@ export const Fwrapper = styled.div`
   }
   max-width: 966px;
   width: 100%;
+  margin-bottom:20px;
 `
 export const Ftitle = styled.span`
   font-size: 20px;

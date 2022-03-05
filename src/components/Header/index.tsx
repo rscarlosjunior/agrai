@@ -10,10 +10,20 @@ export function Header() {
   return (
     <Hcontent>
       {xs && (
-        <Box width="100%" display="flex" justifyContent="space-between" alignItems="center">
-          <Menu sx={{ fontSize: 40 }} />
-          <img src="https://imgur.com/dBwKZVv.png" height={50} alt="Agrai" />
-          <StyledButton />
+        <Box display="flex" width="100%" p="8px" flexDirection="column">
+          <Box
+            width="100%"
+            margin="0 auto"
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+          >
+              <Menu sx={{ fontSize: 40 }} />
+              <img src="https://imgur.com/dBwKZVv.png" height={50} alt="Agrai" />
+              <Box width={40} height={40} style={{opacity:"0"}}>
+                <Typography >right</Typography>
+              </Box>
+          </Box>
         </Box>
       )}
       {!xs && (
@@ -21,7 +31,7 @@ export function Header() {
           <img src="https://imgur.com/dBwKZVv.png" height={50} alt="Agrai" />
           <IconWrapper>
             <IconSpacing>
-              {menuItem.map((item,index) => (
+              {menuItem.map((item, index) => (
                 <Typography
                   key={index}
                   className="menu-hover"
@@ -34,7 +44,7 @@ export function Header() {
               ))}
             </IconSpacing>
           </IconWrapper>
-          <StyledButton icon="🍃" description="Lorin Ipsum"/>
+          <StyledButton icon="🍃" description="Lorin Ipsum" />
         </>
       )}
     </Hcontent>

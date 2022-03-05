@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRightAlt } from '@mui/icons-material'
+import { ArrowRightAlt } from '@mui/icons-material'
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 
@@ -38,7 +38,7 @@ function HowItWorksBox() {
         margin="auto"
         display="flex"
         width="100%"
-        justifyContent="flex-start"
+        justifyContent={{ xs: 'center', md: 'flex-start' }}
         alignItems="center"
         mb="30px"
         mt="20px"
@@ -54,12 +54,15 @@ function HowItWorksBox() {
         width="100%"
         justifyContent="space-between"
         alignItems="center"
+        overflow="auto hidden"
       >
         {works.map((item) => (
           <>
             <Box
-              width={210}
-              height={260}
+              minWidth={160}
+              maxWidth={210}
+              minHeight={260}
+              maxHeight={260}
               padding="16px"
               bgcolor="transparent"
               border="1px solid #4FB862"
@@ -68,6 +71,9 @@ function HowItWorksBox() {
               flexDirection="column"
               justifyContent="center"
               alignItems="center"
+              style={{
+                WebkitOverflowScrolling: 'touch'
+              }}
             >
               <Box
                 width="100%"

@@ -21,33 +21,32 @@ export const Footer = () => {
         <Wrapper>
           <Ftitle>Localização</Ftitle>
           <Line />
-          <Faddress>Avenida Andrômeda, 2000. Bloco 6 e 8</Faddress>
-          <Faddress>Alphavile SP</Faddress>
-          <Faddress>brasil@corebiz.ag</Faddress>
-          <Faddress>+55 11 3090 1039</Faddress>
+          <Faddress>Avenida Nossa Senhora da Penha, n 595</Faddress>
+          <Faddress>Santa Lúcia, ES</Faddress>
+          <Faddress>contato@agrai.com.br</Faddress>
+          <Faddress>+55 27 9971-2369</Faddress>
         </Wrapper>
 
         <FbuttonWrapper>
           <Fbutton>
             <FbuttonIcon>
-              {' '}
-              <EmailIcon />{' '}
+              <EmailIcon />
             </FbuttonIcon>
             Entre em Contato
           </Fbutton>
           <Fbutton>
             <FbuttonIcon>
-              <HeadphonesIcon />{' '}
-            </FbuttonIcon>{' '}
-            Fale com o nosso consultor online
+              <HeadphonesIcon />
+            </FbuttonIcon>
+            Saiba Mais
           </Fbutton>
         </FbuttonWrapper>
         <Fimagewrapper>
           <img
             height="45"
             alt="logo"
-            width="200"
-            src="https://i.imgur.com/11lCxTX.png"
+            width="100"
+            src="https://imgur.com/dBwKZVv.png"
           />
         </Fimagewrapper>
       </Fwrapper>

@@ -1,4 +1,4 @@
-# CB commerce
+# Agrai
 
 To run you gonna need : 
 node ˆ16.10.0

@@ -2,18 +2,9 @@ import React, { useState } from 'react'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
-import {
-  NInput,
-  NinputWrapper,
-  NTitle,
-  Nwrapper,
-  Nbutton,
-  NvalidationField,
-  NInputErrorMessage,
-  NTitleDescription,
-  NbuttonSuccess
-} from './styles'
+import { Input } from './styles'
 import LoadingButton from '@mui/lab/LoadingButton'
+import { Box, Typography } from '@mui/material'
 
 export const Newsletter = () => {
   const [assign, setAssign] = useState(false)
@@ -21,8 +12,7 @@ export const Newsletter = () => {
     email: yup
       .string()
       .email('Favor digitar um e-mail válido')
-      .required('Favor preencher corretamente o campo.'),
-    username: yup.string().required('O nome é obrigatório')
+      .required('Favor preencher corretamente o campo.')
   })
   const {
     register,
@@ -38,74 +28,123 @@ export const Newsletter = () => {
     setAssign(false)
   }
   return (
-    <Nwrapper>
+    <Box mt="32px" borderTop="1px solid #dadada">
       {!assign ? (
         <>
-          <NTitle>Participe de nossas news com promoções e novidades!</NTitle>
-          <NinputWrapper>
-            <NvalidationField>
-              <NInput
-                {...register('username')}
-                placeholder="Digite seu nome"
-                type="text"
-                required
-              />
-              <NInputErrorMessage>
-                {errors.username?.message}
-              </NInputErrorMessage>
-            </NvalidationField>
-            <NvalidationField>
-              <NInput
+          <Box width="100%" bgcolor="white" maxWidth={752} m="auto">
+            <Typography
+              textAlign='center'
+              justifyContent="center"
+              mt="16px"
+              display="flex"
+              variant="h4"
+              fontWeight="300"
+              color="#7a7a7a"
+            >
+              Inscreva-se para receber nossos conteúdos e atualizações.
+            </Typography>
+          </Box>
+          <Box
+            display="flex"
+            width="100%"
+            mt="16px"
+            mb="16px"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection={{ xs: 'column', md: 'row' }}
+          >
+            <Box
+              display="flex"
+              m="5px"
+              alignItems="center"
+              width="100%"
+              maxWidth={280}
+              justifyContent="center"
+              flexDirection="column"
+            >
+              <Input
                 {...register('email')}
                 placeholder="Digite seu e-mail"
                 type="email"
                 required
               />
-              <NInputErrorMessage>{errors.email?.message}</NInputErrorMessage>
-            </NvalidationField>
-            <Nbutton>
+              <Typography fontSize={12} color="red">
+                {errors.email?.message}
+              </Typography>
+            </Box>
+            <Box
+              m="5px"
+              width="100%"
+              maxWidth={{ xs: 280, md: 140 }}
+              mt={{ xs: '5px', md: 'unset' }}
+            >
               <LoadingButton
                 onClick={handleSubmit(onSubmitHandler)}
                 loading={false}
                 variant="contained"
                 style={{
-                  marginBottom:
-                    errors.email?.message || errors.email?.message
-                      ? '15px'
-                      : '',
-                  backgroundColor: '#000000',
-                  color: 'white',
+                  marginBottom: errors.email?.message ? '15px' : '',
+                  backgroundColor: 'transparent',
+                  color: '#7a7a7a',
                   width: '100%',
                   flexDirection: 'row',
                   height: '48px',
-                  border: 'none',
+                  border: '1px solid #dadada',
                   fontSize: '12px',
-                  fontWeight: 700,
-                  borderRadius: '5px'
+                  fontWeight: 300,
+                  borderRadius: '5px',
+                  boxShadow: 'none'
                 }}
               >
-                Eu quero!
+                Cadastrar 🍎
               </LoadingButton>
-            </Nbutton>
-          </NinputWrapper>
+            </Box>
+          </Box>
         </>
       ) : (
         <>
-          <NTitle>Seu e-mail foi cadastrado com sucesso!</NTitle>
-          <NTitleDescription>
-            A partir de agora você receberá as novidade e ofertas exclusivas.
-          </NTitleDescription>
-          <NinputWrapper>
-            <NbuttonSuccess>
+          <Box width="100%" bgcolor="white" maxWidth={752} m="auto">
+            <Typography
+              textAlign='center'
+              justifyContent="center"
+              mt="16px"
+              display="flex"
+              variant="h4"
+              fontWeight="300"
+              color="#7a7a7a"
+            >
+              Inscrição realizada com sucesso!
+            </Typography>
+            <Typography
+              textAlign='center'
+              justifyContent="center"
+              mt="16px"
+              maxWidth={{xs:350, md:'unset'}}
+              margin={{xs:'auto', md:'unset'}}
+              paddingTop={{xs:'8px', md:'unset'}}
+              display="flex"
+              variant="h6"
+              fontWeight="300"
+              color="#7a7a7a"
+            >
+              Agora você irá receber todas as nossas novidades e conteúdos por e-mail.
+            </Typography>
+            </Box>
+          <Box
+            display="flex"
+            minHeight={{xs:'126px', md:'unset'}}
+            width="100%"
+            mb="16px"
+            alignItems='center'
+            justifyContent="center"
+          >
+            <Box m="5px" width="100%" maxWidth={280}>
               <LoadingButton
                 onClick={goBackToAssign}
                 loading={false}
                 variant="contained"
                 style={{
-                  marginBottom:
-                    errors.email?.message || errors.email?.message
-                      ? '15px'
-                      : '',
+                  marginBottom: errors.email?.message ? '15px' : '',
                   backgroundColor: '#000000',
                   color: 'white',
                   width: '100%',
@@ -119,10 +158,10 @@ export const Newsletter = () => {
               >
                 Cadastrar novo e-mail
               </LoadingButton>
-            </NbuttonSuccess>
-          </NinputWrapper>
+            </Box>
+          </Box>
         </>
       )}
-    </Nwrapper>
+    </Box>
   )
 }

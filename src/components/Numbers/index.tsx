@@ -2,7 +2,15 @@ import { Box, Typography } from '@mui/material'
 import React from 'react'
 
 function Numbers() {
-  const number = { send: 250, partner: 120, users: 138 }
+  const number = [
+    { value: 250, title: 'Toneladas', description: 'de orgânicos entregues' },
+    {
+      value: 120,
+      title: 'Produtores',
+      description: 'na nossa rede de parceiros'
+    },
+    { value: 138, title: 'Clientes', description: 'em todo Brasil' }
+  ]
   return (
     <>
       <Box
@@ -10,10 +18,10 @@ function Numbers() {
         margin="auto"
         display="flex"
         width="100%"
-        justifyContent="flex-start"
+        justifyContent={{ xs: 'center', md: 'flex-start' }}
         alignItems="center"
-        mb="30px"
-        mt="30px"
+        mb="24px"
+        mt="48px"
       >
         <Typography variant="h4" fontWeight="300" color="#7a7a7a">
           Agrai em números:
@@ -26,88 +34,39 @@ function Numbers() {
         width="100%"
         justifyContent="space-between"
         alignItems="center"
+        flexDirection={{ xs: 'column', md: 'row' }}
       >
-        <Box
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Typography
+        {number.map((item) => (
+          <Box
             display="flex"
+            flexDirection="column"
+            mt={{ xs: '16px', md: 'unset' }}
             justifyContent="center"
             alignItems="center"
-            variant="h1"
-            color="#4fb849"
+            width="210px"
           >
-            {number.send}
-            <Typography display="flex" variant="h3" color="#7a7a7a">
-              +
+            <Typography
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              variant="h1"
+              color="#4fb849"
+            >
+              {item.value}
+              <Typography display="flex" variant="h3" color="#7a7a7a">
+                +
+              </Typography>
             </Typography>
-          </Typography>
-          <Box display="flex" flexDirection="column" alignItems="center">
-            <Typography variant="h5" color="#7a7a7a">
-              Toneladas
-            </Typography>
-            <Typography variant="h5" color="#7a7a7a">
-              de orgânicos entregues
-            </Typography>
+            <Box display="flex" flexDirection="column" alignItems="center">
+              <Typography variant="h5" color="#7a7a7a">
+                {item.title}
+              </Typography>
+              <Typography variant="h5" color="#7a7a7a">
+                {item.description}
+              </Typography>
+            </Box>
           </Box>
-        </Box>
-        <Box
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Typography
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            variant="h1"
-            color="#4fb849"
-          >
-            {number.partner}
-            <Typography display="flex" variant="h3" color="#7a7a7a">
-              +
-            </Typography>
-          </Typography>
-          <Box display="flex" flexDirection="column" alignItems="center">
-            <Typography variant="h5" color="#7a7a7a">
-              Produtores
-            </Typography>
-            <Typography variant="h5" color="#7a7a7a">
-              na nossa rede de parceiros
-            </Typography>
-          </Box>
-        </Box>
-        <Box
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Typography
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            variant="h1"
-            color="#4fb849"
-          >
-            {number.users}
-            <Typography display="flex" variant="h3" color="#7a7a7a">
-              +
-            </Typography>
-          </Typography>
-          <Box display="flex" flexDirection="column" alignItems="center">
-            <Typography variant="h5" color="#7a7a7a">
-              Clientes
-            </Typography>
-            <Typography variant="h5" color="#7a7a7a">
-              em todo Brasil
-            </Typography>
-          </Box>
-        </Box>
+        ))}
       </Box>
     </>
   )
