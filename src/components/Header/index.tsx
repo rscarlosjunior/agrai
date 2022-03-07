@@ -13,13 +13,7 @@ export function Header() {
     },
     {
       name: 'Sobre', pathname: 'sobre'
-    },
-    {
-      name: 'Cadastro de Clientes', pathname: 'cadastro-cliente'
-    },
-    {
-      name: 'Cadastro de Produtores', pathname: 'cadastro-produtor'
-    },
+    }
   ]
   return (
     <Hcontent>
@@ -60,7 +54,7 @@ export function Header() {
               ))}
             </IconSpacing>
           </IconWrapper>
-          <StyledButton icon="🍃" description="Lorin Ipsum" />
+          <StyledButton icon="🍃" description="BLOG" />
         </>
       )}
     </Hcontent>

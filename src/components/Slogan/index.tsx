@@ -1,6 +1,7 @@
 import { ISlogan } from '@/types/contents.interface'
 import { Box, Typography } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import StyledButton from '../StyledButton'
 
 function Slogan({img,buttons, description, title_desk, title_mobile }: ISlogan) {
@@ -36,8 +37,12 @@ function Slogan({img,buttons, description, title_desk, title_mobile }: ISlogan) 
         </Typography>
         {buttons && (
           <Box display="flex" justifyContent="space-around" mt="16px">
-            <StyledButton icon="🧑‍🌾" description="Quero comprar" />
-            <StyledButton icon="🌻" description="Quero Vender" />
+            <Link to="cadastro-cliente">
+              <StyledButton icon="🧑‍🌾" description="Quero comprar" />
+            </Link>
+            <Link to="cadastro-produtor">
+              <StyledButton icon="🌻" description="Quero Vender" />
+            </Link>
           </Box>
         )}
       </Box>
