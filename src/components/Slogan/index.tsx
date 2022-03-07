@@ -1,8 +1,9 @@
+import { ISlogan } from '@/types/contents.interface'
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import StyledButton from '../StyledButton'
 
-function Slogan() {
+function Slogan({img,buttons, description, title_desk, title_mobile }: ISlogan) {
   return (
     <Box
       maxWidth="966px"
@@ -11,6 +12,7 @@ function Slogan() {
       width="100%"
       justifyContent="center"
       alignItems="center"
+      mt="16px"
       flexDirection={{ xs: 'column-reverse', md: 'row' }}
     >
       <Box
@@ -19,27 +21,28 @@ function Slogan() {
         flexDirection="column"
         justifyContent="center"
       >
-        <Box display={{xs:'flex', md:'none'}} justifyContent="center">
+        <Box mt="16px" display={{ xs: 'flex', md: 'none' }} justifyContent="center">
           <Typography variant="h3" textAlign="center" color="#4fb849">
-            A um clique do campo
+            {title_mobile}
           </Typography>
         </Box>
-        <Box display={{xs:'none', md:'flex'}}>
+        <Box display={{ xs: 'none', md: 'flex' }}>
           <Typography variant="h1" color="#4fb849">
-            Qui consectetur ea in duis.
+            {title_desk}
           </Typography>
         </Box>
         <Typography mt="16px" typography="h5" color="#7a7a7a">
-          Ad aliquip sint ut qui ad esse aliqua ipsum sunt. Sint excepteur
-          laboris qui eiusmod anim magna deserunt eiusmod nostrud.
+          {description}
         </Typography>
-        <Box display="flex" justifyContent="space-around" mt="16px">
-          <StyledButton icon="🧑‍🌾" description="Quero comprar" />
-          <StyledButton icon="🌻" description="Quero Vender" />
-        </Box>
+        {buttons && (
+          <Box display="flex" justifyContent="space-around" mt="16px">
+            <StyledButton icon="🧑‍🌾" description="Quero comprar" />
+            <StyledButton icon="🌻" description="Quero Vender" />
+          </Box>
+        )}
       </Box>
       <Box width={{ xs: '100%', md: '50%' }}>
-        <img src="https://i.imgur.com/yRkUnLG.png" width="100%" />
+        <img src={img} width="100%" />
       </Box>
     </Box>
   )

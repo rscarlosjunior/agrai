@@ -3,10 +3,24 @@ import { Hcontent, IconSpacing, IconWrapper } from './styles'
 import { Box, Typography, useMediaQuery } from '@mui/material'
 import { Menu } from '@mui/icons-material'
 import StyledButton from '@/components/StyledButton'
+import { Link } from 'react-router-dom'
 
 export function Header() {
   const xs = useMediaQuery('(max-width:797px)')
-  const menuItem = ['Home', 'Sobre', 'Cadastro']
+  const menuItem = [
+    {
+      name: 'Home', pathname: '/'
+    },
+    {
+      name: 'Sobre', pathname: 'sobre'
+    },
+    {
+      name: 'Cadastro de Clientes', pathname: 'cadastro-cliente'
+    },
+    {
+      name: 'Cadastro de Produtores', pathname: 'cadastro-produtor'
+    },
+  ]
   return (
     <Hcontent>
       {xs && (
@@ -32,15 +46,17 @@ export function Header() {
           <IconWrapper>
             <IconSpacing>
               {menuItem.map((item, index) => (
-                <Typography
-                  key={index}
-                  className="menu-hover"
-                  fontWeight="300"
-                  color="#7a7a7a"
-                  fontSize={16}
-                >
-                  {item}
-                </Typography>
+                <Link to={item.pathname}>
+                  <Typography
+                    key={index}
+                    className="menu-hover"
+                    fontWeight="300"
+                    color="#7a7a7a"
+                    fontSize={16}
+                  >
+                    {item.name}
+                  </Typography>
+                </Link>
               ))}
             </IconSpacing>
           </IconWrapper>

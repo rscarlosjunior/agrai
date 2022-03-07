@@ -50,7 +50,6 @@ export const IconWrapper = styled.div`
 
 export const IconSpacing = styled.div`
   margin: 0px 5px 0px 5px;
-  max-width: 400px;
   width:100%;
   display: flex;
   align-items: center;
