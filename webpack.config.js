@@ -64,7 +64,7 @@ const config = {
           <html>
             <head>
               <meta name="viewport" content="width=device-width, initial-scale=1">
-              <meta charset="utf-8"><title> ${htmlWebpackPlugin.options.title}</title>
+              <meta charset="utf-8"><title> Agrai </title>
             </head>
           <body>
             <div id="app"></div>

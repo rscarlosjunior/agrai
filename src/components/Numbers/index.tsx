@@ -1,16 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 
-function Numbers() {
-  const number = [
-    { value: 250, title: 'Toneladas', description: 'de orgânicos entregues' },
-    {
-      value: 120,
-      title: 'Produtores',
-      description: 'na nossa rede de parceiros'
-    },
-    { value: 138, title: 'Clientes', description: 'em todo Brasil' }
-  ]
+function Numbers({ content }: any) {
   return (
     <>
       <Box
@@ -36,8 +27,9 @@ function Numbers() {
         alignItems="center"
         flexDirection={{ xs: 'column', md: 'row' }}
       >
-        {number.map((item) => (
+        {content.map((item, index) => (
           <Box
+            key={index}
             display="flex"
             flexDirection="column"
             mt={{ xs: '16px', md: 'unset' }}

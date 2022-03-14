@@ -56,8 +56,8 @@ function Differentials() {
         alignItems="center"
         flexDirection={{ xs: 'column', md: 'row' }}
       >
-        {topDiff.map((item) => (
-          <Box display="flex" mt={{ xs: '16px', md: 'unset' }} alignItems="center" justifyContent="flex-start">
+        {topDiff.map((item, index) => (
+          <Box key={index} display="flex" mt={{ xs: '16px', md: 'unset' }} alignItems="center" justifyContent="flex-start">
             <Box width="210px" display="flex" flexDirection="column">
               <Box
                 width="100%"
@@ -86,8 +86,8 @@ function Differentials() {
         alignItems="center"
         flexDirection={{ xs: 'column', md: 'row' }}
       >
-        {bottomDiff.map((item) => (
-          <Box display="flex" mt={{ xs: '16px', md: 'unset' }} alignItems="center" justifyContent="flex-start">
+        {bottomDiff.map((item, index) => (
+          <Box key={index} display="flex" mt={{ xs: '16px', md: 'unset' }} alignItems="center" justifyContent="flex-start">
             <Box width="210px" display="flex" flexDirection="column">
               <Box
                 width="100%"

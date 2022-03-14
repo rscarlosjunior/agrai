@@ -40,7 +40,7 @@ export function Header() {
           <IconWrapper>
             <IconSpacing>
               {menuItem.map((item, index) => (
-                <Link to={item.pathname}>
+                <Link key={index} to={item.pathname}>
                   <Typography
                     key={index}
                     className="menu-hover"

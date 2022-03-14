@@ -4,7 +4,17 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import StyledButton from '../StyledButton'
 
-function Slogan({img,buttons, description, title_desk, title_mobile }: ISlogan) {
+function Slogan({
+  img,
+  firstButton,
+  firstButtonLink,
+  secondButton,
+  secondButtonLink,
+  buttons,
+  description,
+  title_desk,
+  title_mobile
+}: ISlogan) {
   return (
     <Box
       maxWidth="966px"
@@ -22,7 +32,11 @@ function Slogan({img,buttons, description, title_desk, title_mobile }: ISlogan) 
         flexDirection="column"
         justifyContent="center"
       >
-        <Box mt="16px" display={{ xs: 'flex', md: 'none' }} justifyContent="center">
+        <Box
+          mt="16px"
+          display={{ xs: 'flex', md: 'none' }}
+          justifyContent="center"
+        >
           <Typography variant="h3" textAlign="center" color="#4fb849">
             {title_mobile}
           </Typography>
@@ -36,12 +50,14 @@ function Slogan({img,buttons, description, title_desk, title_mobile }: ISlogan) 
           {description}
         </Typography>
         {buttons && (
-          <Box display="flex" justifyContent="space-around" mt="16px">
-            <Link to="cadastro-cliente">
-              <StyledButton icon="🧑‍🌾" description="Quero comprar" />
-            </Link>
-            <Link to="cadastro-produtor">
-              <StyledButton icon="🌻" description="Quero Vender" />
+          <Box display="flex" justifyContent="flex-start" mt="16px">
+            <Box mr="8px">
+              <Link style={{ textDecoration: 'none' }} to={firstButtonLink}>
+                <StyledButton icon="🧑‍🌾" description={firstButton} />
+              </Link>
+            </Box>
+            <Link style={{ textDecoration: 'none' }} to={secondButtonLink}>
+              <StyledButton icon="🌻" description={secondButton} />
             </Link>
           </Box>
         )}

@@ -12,6 +12,10 @@ export interface IContents {
     description:string,
     buttons: boolean,
     img: string
+    firstButton?:string
+    firstButtonLink?:string
+    secondButton?:string
+    secondButtonLink?:string
   }
   export interface IEmptyGrayspace {
     img?: string,    

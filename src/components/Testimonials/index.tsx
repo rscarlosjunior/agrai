@@ -61,9 +61,10 @@ function Testimonials() {
         justifyContent="space-between"
         alignItems="center"
       >
-        {comments.map((item) => (
-          <>
+        {comments.map((item, index) => (
+          <div key={index}>
             <Box
+              key={index}
               width="480px"
               height="auto"
               mb="5px"
@@ -113,7 +114,7 @@ function Testimonials() {
                 </Box>
               </Box>
             </Box>
-          </>
+          </div>
         ))}
       </Box>
     </>

@@ -1,22 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Header } from '@/components/Header'
 import { Container, Template } from '@/styles/styles'
-import { usePrismicService } from '@/services/prismic'
 import { Newsletter } from '@/components/Newsletter'
 import { Footer } from '@/components/Footer'
 import Slogan from '@/components/Slogan'
-import useMediaQuery from '@mui/material/useMediaQuery'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Box } from '@mui/material'
-import HowItWorksBox from '@/components/HowItWorksBox'
-import Numbers from '@/components/Numbers'
 import Testimonials from '@/components/Testimonials'
 import { Contents } from '@/pages/utils'
 import EmptyGrayspace from '@/components/EmptyGrayspace'
+import { usePrismic } from '@/hooks/usePrismic'
 
 export const About: React.FC = () => {
-  const { getPrismicByQuery } = usePrismicService()
-  const xs = useMediaQuery('(max-width:797px)')
+  const { results } = usePrismic()
 
   return (
     <>

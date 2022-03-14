@@ -2,35 +2,7 @@ import { ArrowRightAlt } from '@mui/icons-material'
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 
-function HowItWorksBox() {
-  const works = [
-    {
-      title: 'In pariatur fugiat laboris.',
-      icon: 'https://i.imgur.com/9XjnDyO.png',
-      description: 'Occaecat ea culpa ad tempor deserunt aute nostrud.',
-      last: false
-    },
-    {
-      title: 'In pariatur fugiat laboris.',
-      icon: 'https://i.imgur.com/i17tvnU.png',
-      description:
-        'Labore ex ea aliquip ullamco cupidatat sunt ad ad nulla esse officia sunt amet aute.',
-      last: false
-    },
-    {
-      title: 'In pariatur fugiat laboris.',
-      icon: 'https://i.imgur.com/rg6Dc7b.png',
-      description:
-        'Eiusmod anim id voluptate ad voluptate voluptate tempor cupidatat cupidatat.',
-      last: false
-    },
-    {
-      title: 'In pariatur fugiat laboris.',
-      icon: 'https://i.imgur.com/FV0czJr.png',
-      description: 'Veniam sit labore adipisicing tempor non adipisicing.',
-      last: true
-    }
-  ]
+function HowItWorksBox({content}: any) {
   return (
     <>
       <Box
@@ -56,13 +28,13 @@ function HowItWorksBox() {
         alignItems="center"
         overflow="auto hidden"
       >
-        {works.map((item) => (
-          <>
+         {content.map((item, index) => (
+          <div key={index}>
             <Box
               minWidth={160}
               maxWidth={210}
-              minHeight={260}
-              maxHeight={260}
+              minHeight={360}
+              maxHeight={360}
               padding="16px"
               bgcolor="transparent"
               border="1px solid #4FB862"
@@ -113,7 +85,7 @@ function HowItWorksBox() {
                 <ArrowRightAlt width={1} height="20px" />
               </Box>
             )}
-          </>
+          </div>
         ))}
       </Box>
     </>
