@@ -1,41 +1,8 @@
 import { Avatar, Box, Rating, Typography } from '@mui/material'
 import React from 'react'
 
-function Testimonials() {
-  const comments = [
-    {
-      rate: 5,
-      comment:
-        'Sint cillum duis excepteur non. Lorem officia irure anim id ea in excepteur ea tempor qui laborum ex sint. Amet ipsum ullamco ex Lorem elit tempor ullamco aliquip voluptate. Ipsum cupidatat adipisicing anim ea aliqua aliqua veniam sit sint adipisicing in proident enim ipsum. Ipsum minim dolore exercitation deserunt eu officia sit. Duis nostrud ipsum aute elit eu magna laborum exercitation velit cupidatat sunt sit occaecat in. Amet laboris anim deserunt minim.',
-      name: 'Teste inBox',
-      slogan: 'Commodo enim non anim deserunt eiusmod.',
-      photo: 'https://i.imgur.com/3AY0aur.png'
-    },
-    {
-      rate: 5,
-      comment:
-        'Sint cillum duis excepteur non. Lorem officia irure anim id ea in excepteur ea tempor qui laborum ex sint. Amet ipsum ullamco ex Lorem elit tempor ullamco aliquip voluptate. Ipsum cupidatat adipisicing anim ea aliqua aliqua veniam sit sint adipisicing in proident enim ipsum. Ipsum minim dolore exercitation deserunt eu officia sit. Duis nostrud ipsum aute elit eu magna laborum exercitation velit cupidatat sunt sit occaecat in. Amet laboris anim deserunt minim.',
-      name: 'Teste inBox',
-      slogan: 'Commodo enim non anim deserunt eiusmod.',
-      photo: 'https://i.imgur.com/3AY0aur.png'
-    },
-    {
-      rate: 5,
-      comment:
-        'Sint cillum duis excepteur non. Lorem officia irure anim id ea in excepteur ea tempor qui laborum ex sint. Amet ipsum ullamco ex Lorem elit tempor ullamco aliquip voluptate. Ipsum cupidatat adipisicing anim ea aliqua aliqua veniam sit sint adipisicing in proident enim ipsum. Ipsum minim dolore exercitation deserunt eu officia sit. Duis nostrud ipsum aute elit eu magna laborum exercitation velit cupidatat sunt sit occaecat in. Amet laboris anim deserunt minim.',
-      name: 'Teste inBox',
-      slogan: 'Commodo enim non anim deserunt eiusmod.',
-      photo: 'https://i.imgur.com/3AY0aur.png'
-    },
-    {
-      rate: 5,
-      comment:
-        'Sint cillum duis excepteur non. Lorem officia irure anim id ea in excepteur ea tempor qui laborum ex sint. Amet ipsum ullamco ex Lorem elit tempor ullamco aliquip voluptate. Ipsum cupidatat adipisicing anim ea aliqua aliqua veniam sit sint adipisicing in proident enim ipsum. Ipsum minim dolore exercitation deserunt eu officia sit. Duis nostrud ipsum aute elit eu magna laborum exercitation velit cupidatat sunt sit occaecat in. Amet laboris anim deserunt minim.',
-      name: 'Teste inBox',
-      slogan: 'Commodo enim non anim deserunt eiusmod.',
-      photo: 'https://i.imgur.com/3AY0aur.png'
-    }
-  ]
+function Testimonials({content}:any) {
+
   return (
     <>
       <Box
@@ -61,7 +28,7 @@ function Testimonials() {
         justifyContent="space-between"
         alignItems="center"
       >
-        {comments.map((item, index) => (
+        {content.map((item, index) => (
           <div key={index}>
             <Box
               key={index}

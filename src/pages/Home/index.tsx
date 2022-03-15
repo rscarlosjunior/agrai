@@ -3,14 +3,15 @@ import { Header } from '@/components/Header'
 import { Container, Template } from '@/styles/styles'
 import { Newsletter } from '@/components/Newsletter'
 import { Footer } from '@/components/Footer'
-import Slogan from '@/components/Slogan'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Box } from '@mui/material'
+import { usePrismic } from '@/hooks/usePrismic'
+import { variables, filterDatas } from '../utils'
+import Slogan from '@/components/Slogan'
 import HowItWorksBox from '@/components/HowItWorksBox'
 import Numbers from '@/components/Numbers'
 import Differentials from '@/components/Differentials'
 import Testimonials from '@/components/Testimonials'
-import { usePrismic } from '@/hooks/usePrismic'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 export const Agrai: React.FC = () => {
   const { results } = usePrismic()
@@ -22,16 +23,13 @@ export const Agrai: React.FC = () => {
 
   const getContent = () => {
     if (!results) return null
-    console.log(results)
-    const content = results.filter((item) => item.id === 'home')
+    const content = results.filter((item) => item.id === variables.PAGES.HOME)
     setHomeContent(content)
   }
 
-  const memoizedSlogan = useMemo(() => {
+  const slogan = useMemo(() => {
     if (!homeContent) return null
-    const filter = homeContent.filter((item) => item.type === 'slogan')
-    const slogan = filter[0].data
-
+    const slogan = filterDatas(variables.TYPES.SLOGAN, homeContent)
     return (
       <Slogan
         buttons={slogan.firstbutton[0].text || slogan.secondbutton[0].text}
@@ -47,37 +45,24 @@ export const Agrai: React.FC = () => {
     )
   }, [homeContent])
 
-  const memoizedBoxes = useMemo(() => {
+  const boxes = useMemo(() => {
     if (!homeContent) return null
-    const filter = homeContent.filter((item) => item.type === 'carousel')
-    const array = filter[0].data.items
-
-    let items = []
-    array.forEach((element) => {
-      const item = {
-        title: element.title[0].text,
-        description: element.description[0].text,
-        icon: element.img[0].text
-      }
-      items.push(item)
-    })
-    return <HowItWorksBox content={items} />
+    return <HowItWorksBox content={filterDatas( variables.TYPES.CAROUSEL, homeContent)} />
   }, [homeContent])
 
-  const memoizedNumbers = useMemo(() => {
+  const numbers = useMemo(() => {
     if (!homeContent) return null
-    const filter = homeContent.filter((item) => item.type === 'agrainum')
-    const array = filter[0].data.content
-    let items = []
-    array.forEach((element) => {
-      const item = {
-        title: element.title[0].text,
-        description: element.description[0].text,
-        value: element.value
-      }
-      items.push(item)
-    })
-    return <Numbers content={items} />
+    return <Numbers content={filterDatas(variables.TYPES.NUMBER, homeContent)} />
+  }, [homeContent])
+
+  const differentials = useMemo(() => {
+    if (!homeContent) return null
+    return <Differentials content={filterDatas(variables.TYPES.DIFF, homeContent)} />
+  }, [homeContent])
+
+  const testimonials = useMemo(() => {
+    if (!homeContent) return null
+    return <Testimonials content={filterDatas(variables.TYPES.TESTIMONIALS, homeContent)} />
   }, [homeContent])
 
   return (
@@ -87,11 +72,11 @@ export const Agrai: React.FC = () => {
           <Box borderBottom={1} borderColor="#dadada" p="5px">
             <Header />
           </Box>
-          {memoizedSlogan}
-          {memoizedBoxes}
-          {memoizedNumbers}
-          <Differentials />
-          <Testimonials />
+          {slogan}
+          {boxes}
+          {numbers}
+          {differentials}
+          {testimonials}
         </Container>
         <Newsletter />
         <Footer />

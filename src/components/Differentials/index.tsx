@@ -1,35 +1,12 @@
 import { Box, Grid, Typography } from '@mui/material'
 import React from 'react'
 
-function Differentials() {
-  const topDiff = [
-    {
-      icon: 'https://i.imgur.com/i17tvnU.png',
-      description: 'Compra planejada'
-    },
-    {
-      icon: 'https://i.imgur.com/i17tvnU.png',
-      description: 'Melhor recorrência'
-    },
-    {
-      icon: 'https://i.imgur.com/i17tvnU.png',
-      description: 'Preço acessível'
-    }
-  ]
-  const bottomDiff = [
-    {
-      icon: 'https://i.imgur.com/i17tvnU.png',
-      description: 'Gestão de relacionamento'
-    },
-    {
-      icon: 'https://i.imgur.com/i17tvnU.png',
-      description: 'Acesso à rede de produtores'
-    },
-    {
-      icon: 'https://i.imgur.com/i17tvnU.png',
-      description: 'Previsibilidade de produção'
-    }
-  ]
+function Differentials({content}:any) {
+
+  const topDiff = content.filter(item => item.isSecondLine === false)
+
+  const bottomDiff = content.filter(item => item.isSecondLine === true)
+
   return (
     <Box bgcolor="#F5F5F5" p="16px" mt="32px" mb="24px" mt="48px">
       <Box
@@ -68,7 +45,7 @@ function Differentials() {
                 <img width={50} height={50} src={item.icon} />
               </Box>
               <Typography p="5px" textAlign="center" fontWeight="300" color="#7a7a7a" variant="h5">
-                {item.description}
+                {item.title}
               </Typography>
             </Box>
           </Box>
@@ -98,7 +75,7 @@ function Differentials() {
                 <img width={50} height={50} src={item.icon} />
               </Box>
               <Typography p="5px" textAlign="center" fontWeight="300" color="#7a7a7a" variant="h5">
-                {item.description}
+                {item.title}
               </Typography>
             </Box>
           </Box>

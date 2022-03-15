@@ -24,7 +24,7 @@ export const ContentProvider: React.FC = ({ children }) => {
   const getPrismicByQuery: GetPrismicByQuery = async () => {
     const service = getPrismicClient()
     const result = (await service.query([
-      Prismic.predicates.any('document.type', ['slogan','carousel','agrainum'])
+      Prismic.predicates.any('document.type', ['slogan','carousel','agrainum','differentials','testimonials'])
     ])) as unknown as GetPrismicByQueryResponse
     return result
   }
