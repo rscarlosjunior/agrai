@@ -27,7 +27,7 @@ export const ProductorRegister: React.FC = () => {
             flexDirection={{ xs: 'column-reverse', md: 'row' }}
           >
             <Box width={{ xs: '100%', md: '50%' }}>
-              <img src="https://i.imgur.com/G3wv9Ac.png" width="100%" />
+              <img alt="Produtor Orgânico" src="https://i.imgur.com/G3wv9Ac.png" width="100%" />
             </Box>
             <Box
               display="flex"

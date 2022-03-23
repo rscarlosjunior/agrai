@@ -53,7 +53,7 @@ function HowItWorksBox({content}: any) {
                 display="flex"
                 justifyContent="center"
               >
-                <img width={50} height={50} src={item.icon} />
+                <img alt="Como isso funciona"  width={50} height={50} src={item.icon} />
               </Box>
               <Box
                 display="flex"

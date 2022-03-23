@@ -27,7 +27,7 @@ export const ClientRegister: React.FC = () => {
             flexDirection={{ xs: 'column-reverse', md: 'row' }}
           >
             <Box width={{ xs: '100%', md: '50%' }}>
-              <img src="https://i.imgur.com/tXbF5Pq.png" width="100%" />
+              <img alt="Cliente" src="https://i.imgur.com/tXbF5Pq.png" width="100%" />
             </Box>
             <Box
               display="flex"

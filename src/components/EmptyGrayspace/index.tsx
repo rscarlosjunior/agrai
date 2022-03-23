@@ -1,5 +1,5 @@
 import { IEmptyGrayspace } from '../../types/contents.interface'
-import { Box, Grid, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
 
 function EmptyGrayspace({
@@ -22,7 +22,7 @@ function EmptyGrayspace({
       >
         <Box width={{ xs: '100%', md: '50%' }}>
           {img ? (
-            <img src={img} width="100%" />
+            <img alt="Descritivo" src={img} width="100%" />
           ) : (
             <Typography variant="h3" textAlign="center" color="black">
               {leftTitle}
