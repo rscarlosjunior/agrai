@@ -49,7 +49,7 @@ export function registerClient(data:any) {
 } 
 
 export function whatsapp() {
-  location.href= 'https://api.whatsapp.com/send?phone=5527999096496&text=Bom dia'
+  window.location.href= 'https://api.whatsapp.com/send?phone=5527999096496&text=Bom dia'
 }
 
 export function filterDatas(type, content) {
