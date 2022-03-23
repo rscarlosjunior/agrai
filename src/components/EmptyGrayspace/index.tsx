@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { IEmptyGrayspace } from '../../types/contents.interface'
 import { Box, Typography } from '@mui/material'
-=======
-import { IEmptyGrayspace } from '@/types/contents.interface'
-import { Box, Grid, Typography } from '@mui/material'
->>>>>>> parent of 7f6350c (relative imports)
 import React from 'react'
 
 function EmptyGrayspace({
