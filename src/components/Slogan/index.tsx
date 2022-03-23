@@ -1,4 +1,4 @@
-import { ISlogan } from '../../types/contents.interface'
+import { ISlogan } from '@/types/contents.interface'
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'

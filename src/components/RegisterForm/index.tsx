@@ -4,10 +4,10 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
 import LoadingButton from '@mui/lab/LoadingButton'
-import { StyledForm } from '../../pages/ClientRegister/styles'
-import { Input } from '../../components/InputRegister'
+import { StyledForm } from '@/pages/ClientRegister/styles'
+import { Input } from '@/components/InputRegister'
 import { Box, Checkbox, Typography } from '@mui/material'
-import { registerClient } from '../../pages/utils'
+import { registerClient } from '@/pages/utils'
 
 function RegisterForm() {
   const phoneRegExp =

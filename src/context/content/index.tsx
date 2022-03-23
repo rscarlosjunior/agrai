@@ -2,7 +2,7 @@ import React, { useState, createContext } from 'react'
 import {
   GetPrismicByQuery,
   GetPrismicByQueryResponse
-} from '../../types/IProduct.interface'
+} from '@/types/IProduct.interface'
 import Prismic from '@prismicio/client'
 
 export const ContentContext = createContext({

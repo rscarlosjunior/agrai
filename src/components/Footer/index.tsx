@@ -13,7 +13,7 @@ import {
 } from './styles'
 import EmailIcon from '@mui/icons-material/Email'
 import HeadphonesIcon from '@mui/icons-material/Headphones'
-import { whatsapp } from '../../pages/utils'
+import { whatsapp } from '@/pages/utils'
 
 export const Footer = () => {
 
