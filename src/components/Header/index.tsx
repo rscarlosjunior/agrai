@@ -1,7 +1,7 @@
 import React from 'react'
 import { Hcontent, IconSpacing, IconWrapper } from './styles'
 import { Typography, useMediaQuery } from '@mui/material'
-import StyledButton from '@/components/StyledButton'
+import StyledButton from '../../components/StyledButton'
 import { Link } from 'react-router-dom'
 
 export function Header() {

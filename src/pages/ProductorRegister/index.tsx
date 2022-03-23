@@ -1,12 +1,12 @@
 import React from 'react'
-import { Header } from '@/components/Header'
-import { Container, Template } from '@/styles/styles'
-import { Newsletter } from '@/components/Newsletter'
-import { Footer } from '@/components/Footer'
+import { Header } from '../../components/Header'
+import { Container, Template } from '../../styles/styles'
+import { Newsletter } from '../../components/Newsletter'
+import { Footer } from '../../components/Footer'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Box, Typography } from '@mui/material'
 
-import RegisterForm from '@/components/RegisterForm'
+import RegisterForm from '../../components/RegisterForm'
 
 export const ProductorRegister: React.FC = () => {
   return (
