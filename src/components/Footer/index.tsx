@@ -17,7 +17,7 @@ import { whatsapp } from '../../pages/utils'
 
 export const Footer = () => {
   function goTo() {
-    location.href = '/sobre'
+    window.location.href = '/sobre'
   }
   return (
     <Fbackground>
