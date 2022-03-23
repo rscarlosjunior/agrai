@@ -16,6 +16,9 @@ import HeadphonesIcon from '@mui/icons-material/Headphones'
 import { whatsapp } from '../../pages/utils'
 
 export const Footer = () => {
+  function goTo() {
+    location.href = '/sobre'
+  }
   return (
     <Fbackground>
       <Fwrapper>
@@ -35,7 +38,7 @@ export const Footer = () => {
             </FbuttonIcon>
             Entre em Contato
           </Fbutton>
-          <Fbutton onClick={() => location.href = '/sobre'}>
+          <Fbutton onClick={() => goTo()}>
             <FbuttonIcon>
               <HeadphonesIcon />
             </FbuttonIcon>
