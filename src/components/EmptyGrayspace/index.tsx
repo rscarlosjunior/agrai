@@ -1,4 +1,4 @@
-import { IEmptyGrayspace } from '../../types/contents.interface'
+import { IEmptyGrayspace } from '@/types/contents.interface'
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 
