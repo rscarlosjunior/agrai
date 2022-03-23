@@ -4,11 +4,13 @@ export const Hcontent = styled.div`
   flex-direction: row;
   margin: 10px 0 10px 0;
   width:100%;
-  margin: 0 auto;
   max-width: 966px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  @media screen and (min-width: 798px) {
+    margin: 0 auto;
+  }
   .styled-button {
     max-width:150px;
     width: 100%;
@@ -43,9 +45,7 @@ export const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   align-items: center;
-  @media screen and (min-width: 798px) {
-    width: 100%;
-  }
+  width: 100%;
 `
 
 export const IconSpacing = styled.div`
@@ -55,6 +55,9 @@ export const IconSpacing = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  @media screen and (max-width: 798px) {
+    justify-content: flex-end;
+  }
 `
 export const MyAccount = styled.span`
   font-size: 15px;

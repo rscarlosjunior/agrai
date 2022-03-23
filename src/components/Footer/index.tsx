@@ -13,6 +13,7 @@ import {
 } from './styles'
 import EmailIcon from '@mui/icons-material/Email'
 import HeadphonesIcon from '@mui/icons-material/Headphones'
+import { whatsapp } from '@/pages/utils'
 
 export const Footer = () => {
   return (
@@ -28,13 +29,13 @@ export const Footer = () => {
         </Wrapper>
 
         <FbuttonWrapper>
-          <Fbutton>
+          <Fbutton onClick={() => whatsapp()}>
             <FbuttonIcon>
               <EmailIcon />
             </FbuttonIcon>
             Entre em Contato
           </Fbutton>
-          <Fbutton>
+          <Fbutton onClick={() => location.href = '/sobre'}>
             <FbuttonIcon>
               <HeadphonesIcon />
             </FbuttonIcon>

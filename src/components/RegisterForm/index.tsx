@@ -7,6 +7,7 @@ import LoadingButton from '@mui/lab/LoadingButton'
 import { StyledForm } from '@/pages/ClientRegister/styles'
 import { Input } from '@/components/InputRegister'
 import { Box, Checkbox, Typography } from '@mui/material'
+import { registerClient } from '@/pages/utils'
 
 function RegisterForm() {
   const phoneRegExp =
@@ -28,7 +29,7 @@ function RegisterForm() {
   } = useForm({ resolver: yupResolver(schema) })
 
   const onSubmitHandler = (data: any) => {
-    console.log(data)
+    registerClient(data)
   }
   return (
     <>
@@ -69,12 +70,7 @@ function RegisterForm() {
         <Typography fontSize={12} color="red">
           {errors.address?.message}
         </Typography>
-        <Box
-          mt="16px"
-          width="100%"
-          justifyContent="center"
-          alignItems="center"
-        >
+        <Box mt="16px" width="100%" justifyContent="center" alignItems="center">
           <LoadingButton
             type="submit"
             loading={false}
@@ -98,7 +94,14 @@ function RegisterForm() {
             Enviar dados
           </LoadingButton>
         </Box>
-        <Box pt={{ xs: '8px', md: '16px' }} pb="8px" margin="auto" display="flex" width="100%" maxWidth="350px">
+        <Box
+          pt={{ xs: '8px', md: '16px' }}
+          pb="8px"
+          margin="auto"
+          display="flex"
+          width="100%"
+          maxWidth="350px"
+        >
           <Checkbox
             sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
             {...register('checkbox')}

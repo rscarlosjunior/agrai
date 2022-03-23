@@ -32,7 +32,7 @@ function Testimonials({content}:any) {
           <div key={index}>
             <Box
               key={index}
-              width="480px"
+              width={{xs:'100%', md: "480px"}}
               height="auto"
               mb="5px"
               padding="16px"

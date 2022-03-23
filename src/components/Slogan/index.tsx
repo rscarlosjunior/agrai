@@ -50,7 +50,11 @@ function Slogan({
           {description}
         </Typography>
         {buttons && (
-          <Box display="flex" justifyContent="flex-start" mt="16px">
+          <Box
+            display="flex"
+            justifyContent={{ xs: 'center', md: 'flex-start' }}
+            mt="16px"
+          >
             <Box mr="8px">
               <Link style={{ textDecoration: 'none' }} to={firstButtonLink}>
                 <StyledButton icon="🧑‍🌾" description={firstButton} />

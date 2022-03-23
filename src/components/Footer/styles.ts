@@ -72,6 +72,7 @@ export const Fbutton = styled.button`
   margin: 5px;
   text-transform: uppercase;
   margin-bottom: 24px;
+  cursor: pointer;
   background-color: white;
   color: black;
   width: 100%;

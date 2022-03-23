@@ -1,8 +1,3 @@
-// import {
-//   GetPrismicByQuery,
-//   GetPrismicByQueryResponse
-// } from '@/types/IProduct.interface'
-// import Prismic from '@prismicio/client'
 // import { useState } from 'react'
 
 // export const usePrismicService = () => {

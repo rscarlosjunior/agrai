@@ -29,7 +29,7 @@ function HowItWorksBox({content}: any) {
         overflow="auto hidden"
       >
          {content.map((item, index) => (
-          <div key={index}>
+          <>
             <Box
               minWidth={160}
               maxWidth={210}
@@ -41,7 +41,7 @@ function HowItWorksBox({content}: any) {
               borderRadius="5px"
               display="flex"
               flexDirection="column"
-              justifyContent="center"
+              justifyContent={{ xs: 'flex-start', md: 'center' }}
               alignItems="center"
               style={{
                 WebkitOverflowScrolling: 'touch'
@@ -85,7 +85,7 @@ function HowItWorksBox({content}: any) {
                 <ArrowRightAlt width={1} height="20px" />
               </Box>
             )}
-          </div>
+          </>
         ))}
       </Box>
     </>
