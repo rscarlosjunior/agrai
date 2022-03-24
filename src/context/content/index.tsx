@@ -14,9 +14,9 @@ export const ContentProvider: React.FC = ({ children }) => {
   const [ results, setResults] = useState()
 
   const getPrismicClient = (req?: unknown) => {
-    const prismic = Prismic.client(process.env.PRISMIC_ENDPOINT, {
+    const prismic = Prismic.client('https://agrai-website.prismic.io/api/v2', {
       req,
-      accessToken: process.env.PRISMIC_ACCESS_TOKEN
+      accessToken: 'MC5ZaTZHRXhJQUFDOEFxZ1FM.FTgwW--_vQLvv70m77-977-9Ze-_ve-_ve-_ve-_vTYU77-9TXMEQFND77-977-9fe-_ve-_ve-_ve-_vTg'
     })
     return prismic
   }
