@@ -46,7 +46,7 @@ function Slogan({
             {title_desk}
           </Typography>
         </Box>
-        <Typography mt="16px" typography="h5" color="#7a7a7a">
+        <Typography textAlign="center" mt="16px" typography="h5" color="#7a7a7a">
           {description}
         </Typography>
         {buttons && (

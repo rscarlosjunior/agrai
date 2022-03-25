@@ -9,10 +9,10 @@ function Numbers({ content }: any) {
         margin="auto"
         display="flex"
         width="100%"
-        justifyContent={{ xs: 'center', md: 'flex-start' }}
+        justifyContent='flex-start'
         alignItems="center"
-        mb="24px"
-        mt="48px"
+        mt="32px"
+        mb="16px"
       >
         <Typography variant="h4" fontWeight="300" color="#7a7a7a">
           Agrai em números:
@@ -25,17 +25,19 @@ function Numbers({ content }: any) {
         width="100%"
         justifyContent="space-between"
         alignItems="center"
-        flexDirection={{ xs: 'column', md: 'row' }}
+        overflow="auto hidden"
       >
         {content.map((item, index) => (
           <Box
+            minWidth={210}
             key={index}
             display="flex"
             flexDirection="column"
-            mt={{ xs: '16px', md: 'unset' }}
-            justifyContent="center"
+            justifyContent={{ xs: 'flex-start', md: 'center' }}
             alignItems="center"
-            width="210px"
+            style={{
+              WebkitOverflowScrolling: 'touch'
+            }}
           >
             <Typography
               display="flex"

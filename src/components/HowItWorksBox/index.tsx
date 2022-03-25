@@ -2,7 +2,7 @@ import { ArrowRightAlt } from '@mui/icons-material'
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 
-function HowItWorksBox({content}: any) {
+function HowItWorksBox({ content }: any) {
   return (
     <>
       <Box
@@ -10,10 +10,10 @@ function HowItWorksBox({content}: any) {
         margin="auto"
         display="flex"
         width="100%"
-        justifyContent={{ xs: 'center', md: 'flex-start' }}
+        justifyContent='flex-start'
         alignItems="center"
-        mb="30px"
-        mt="20px"
+        mb="16px"
+        mt="32px"
       >
         <Typography variant="h4" fontWeight="300" color="#7a7a7a">
           Como funciona:
@@ -28,13 +28,14 @@ function HowItWorksBox({content}: any) {
         alignItems="center"
         overflow="auto hidden"
       >
-         {content.map((item, index) => (
+        {content.map((item, index) => (
           <>
             <Box
-              minWidth={160}
-              maxWidth={210}
-              minHeight={360}
-              maxHeight={360}
+              key={index}
+              minWidth={180}
+              maxWidth={180}
+              minHeight={260}
+              maxHeight={260}
               padding="16px"
               bgcolor="transparent"
               border="1px solid #4FB862"
@@ -53,7 +54,12 @@ function HowItWorksBox({content}: any) {
                 display="flex"
                 justifyContent="center"
               >
-                <img alt="Como isso funciona"  width={50} height={50} src={item.icon} />
+                <img
+                  alt="Como isso funciona"
+                  width={50}
+                  height={50}
+                  src={item.icon}
+                />
               </Box>
               <Box
                 display="flex"
