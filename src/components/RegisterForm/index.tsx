@@ -7,7 +7,7 @@ import LoadingButton from '@mui/lab/LoadingButton'
 import { StyledForm } from '@/pages/ClientRegister/styles'
 import { Input } from '@/components/InputRegister'
 import { Box, Checkbox, Typography } from '@mui/material'
-import { registerClient } from '@/pages/utils'
+import { Lead } from '@/services/register'
 
 function RegisterForm() {
   const phoneRegExp =
@@ -29,7 +29,15 @@ function RegisterForm() {
   } = useForm({ resolver: yupResolver(schema) })
 
   const onSubmitHandler = (data: any) => {
-    registerClient(data)
+    const body = {
+      contact: {
+        email: data.email,
+        firstName: data.name,
+        phone: data.phoneNumber,
+        fieldValues: [{ field: '4', value: data.address }]
+      }
+    }
+    Lead(body)
   }
   return (
     <>

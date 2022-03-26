@@ -23,36 +23,9 @@ export const Contents = {
   registerProductor: {}
 }
 
-export function registerClient(data:any) {
-  const options = {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-      'api-token': '93dd8831a9a9e5763432e625c76ec48b78d0349d4c4b92e0917aaebc59cb7d5d33d71edf',
-      'Access-Control-Allow-Credentials': '*',
-      'Access-Control-Allow-Methods': 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
-      'Access-Control-Allow-Headers': 'Accept'
-    },
-    body: JSON.stringify({
-      contact: {
-        email: data.email,
-        firstName: data.name,
-        phone: data.phoneNumber,
-        fieldValues: [
-          {field: '4', value: data.address},
-        ]
-      }
-    })
-  };
-  fetch('https://agraiflv.api-us1.com/api/1/contacts', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-} 
-
 export function whatsapp() {
-  window.location.href= 'https://api.whatsapp.com/send?phone=5527999096496&text=Bom dia'
+  window.location.href =
+    'https://api.whatsapp.com/send?phone=5527999096496&text=Bom dia'
 }
 
 export function filterDatas(type, content) {
@@ -123,7 +96,7 @@ export const variables = {
     HOME: 'home',
     ABOUT: 'about'
   },
-  TYPES : {
+  TYPES: {
     SLOGAN: 'slogan',
     CAROUSEL: 'carousel',
     NUMBER: 'agrainum',
