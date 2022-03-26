@@ -42,7 +42,7 @@ export function registerClient(data:any) {
       }
     })
   };
-  fetch('http://agraiflv.api-us1.com/api/1/contacts', options)
+  fetch('https://agraiflv.api-us1.com/api/1/contacts', options)
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err));
