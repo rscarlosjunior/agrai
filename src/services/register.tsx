@@ -16,7 +16,7 @@ export const Lead = (userParams: any) => {
 
   axios
     .post(
-      'https://agraiflv.api-us1.com/api/1/contacts',
+      'https://agraiflv.api-us1.com/api/3/contacts',
       userParams,
       axiosConfig
     )
