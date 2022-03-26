@@ -39,7 +39,7 @@ function Differentials({ content }: any) {
   }, [])
 
   return (
-    <Box bgcolor="#F5F5F5" pt="4px" mt="32px" mb="24px" mt='32px'>
+    <Box pt="4px" mt="40px" mb="24px">
       <Box
         maxWidth="966px"
         margin="auto"

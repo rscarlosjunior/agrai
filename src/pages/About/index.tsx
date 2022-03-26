@@ -7,7 +7,7 @@ import Slogan from '@/components/Slogan'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Box } from '@mui/material'
 import Testimonials from '@/components/Testimonials'
-import { Contents, filterDatas, variables } from '@/pages/utils'
+import { filterDatas, variables } from '@/pages/utils'
 import EmptyGrayspace from '@/components/EmptyGrayspace'
 import { usePrismic } from '@/hooks/usePrismic'
 

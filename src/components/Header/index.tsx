@@ -1,6 +1,6 @@
 import React from 'react'
-import { Hcontent, IconSpacing, IconWrapper } from './styles'
-import { Typography, useMediaQuery } from '@mui/material'
+import { Hcontent, IconSpacing, IconWrapper , HeaderItem} from './styles'
+import { useMediaQuery } from '@mui/material'
 import StyledButton from '@/components/StyledButton'
 import { Link } from 'react-router-dom'
 
@@ -13,9 +13,10 @@ export function Header() {
     },
     {
       name: 'Sobre',
-      pathname: 'sobre'
+      pathname: '/sobre'
     }
   ]
+
   return (
     <Hcontent>
       <>
@@ -23,30 +24,11 @@ export function Header() {
         <IconWrapper>
           <IconSpacing>
             {menuItem.map((item, index) => (
-              <Link key={index} to={item.pathname}>
-                <Typography
-                  key={index}
-                  className="menu-hover"
-                  fontWeight="300"
-                  color="#7a7a7a"
-                  fontSize={16}
-                  paddingRight="16px"
-                >
-                  {item.name}
-                </Typography>
-              </Link>
+              <HeaderItem key={index} pathname={item.pathname} name={item.name}/>
             ))}
             {xs && (
               <Link to="/blog">
-                <Typography
-                  className="menu-hover"
-                  fontWeight="300"
-                  color="#7a7a7a"
-                  fontSize={16}
-                  paddingRight="16px"
-                >
-                  Blog
-                </Typography>
+                <HeaderItem pathname='/x' name='Blog'/>
               </Link>
             )}
           </IconSpacing>

@@ -11,7 +11,7 @@ function Numbers({ content }: any) {
         width="100%"
         justifyContent='flex-start'
         alignItems="center"
-        mt="32px"
+        mt="40px"
         mb="16px"
       >
         <Typography variant="h4" fontWeight="300" color="#7a7a7a">

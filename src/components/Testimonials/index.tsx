@@ -14,7 +14,7 @@ function Testimonials({ content }: any) {
         justifyContent='flex-start'
         alignItems="center"
         mb="20px"
-        mt="32px"
+        mt="40px"
       >
         <Typography variant="h4" fontWeight="300" color="#7a7a7a">
           Depoimentos:
