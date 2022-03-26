@@ -1,7 +1,7 @@
 import axios from 'axios'
 export const Lead = (userParams: any) => {
-    console.log(userParams)
-  let axiosConfig = {
+
+   let axiosConfig = {
     headers: {
       'Content-Type': 'application/json;charset=UTF-8',
       'Accept': 'application/json',
@@ -16,7 +16,7 @@ export const Lead = (userParams: any) => {
 
   axios
     .post(
-      'https://agraiflv.api-us1.com/api/1/contacts',
+      'http://agraiflv.api-us1.com/api/1/contacts',
       userParams,
       axiosConfig
     )
