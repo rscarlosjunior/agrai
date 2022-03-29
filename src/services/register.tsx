@@ -11,8 +11,10 @@ export const Lead = (userParams: any) => {
       'Access-Control-Allow-Credentials': '*',
       'Access-Control-Request-Headers':'origin, x-requested-with',
       'Origin': '*',
-      'Access-Control-Allow-Methods': 'GET,POST,PUT',
-      'Access-Control-Allow-Headers': 'Accept'
+      'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE',
+      'Access-Control-Allow-Headers': 'Accept',
+      'Access-Control-Max-Age': '86400',
+      'Connection': 'keep-alive'
     }
   }
 
