@@ -26,24 +26,6 @@ export const Agrai: React.FC = () => {
     setHomeContent(content)
   }
 
-  const slogan = useMemo(() => {
-    if (!homeContent) return null
-    const slogan = filterDatas(variables.TYPES.SLOGAN, homeContent)
-    return (
-      <Slogan
-        buttons={slogan.firstbutton[0].text || slogan.secondbutton[0].text}
-        firstButton={slogan.firstbutton[0].text}
-        firstButtonLink={slogan.firstbuttonlink[0].text}
-        secondButton={slogan.secondbutton[0].text}
-        secondButtonLink={slogan.secondbuttonlink[0].text}
-        description={slogan.slogandescription[0].text}
-        title_mobile={slogan.pagetitle[0].text}
-        title_desk={slogan.pagetitle[0].text}
-        img={slogan.img.url}
-      />
-    )
-  }, [homeContent])
-
   const boxes = useMemo(() => {
     if (!homeContent) return null
     return <HowItWorksBox content={filterDatas( variables.TYPES.CAROUSEL, homeContent)} />
@@ -71,7 +53,17 @@ export const Agrai: React.FC = () => {
           <Box borderBottom={1} borderColor="#dadada" p="5px">
             <Header />
           </Box>
-          {slogan}
+          <Slogan
+            buttons={true}
+            firstButton='Quero comprar'
+            firstButtonLink='/cadastro-produtor'
+            secondButton='Quero vender'
+            secondButtonLink='/cadastro-cliente'
+            description='Facilitamos o processo de compra de FLV orgânico das empresas.'
+            title_mobile='Conectando o campo à cidade.'
+            title_desk='Conectando o campo à cidade.'
+            img='https://i.imgur.com/yRkUnLG.png'
+          />
           {boxes}
           {numbers}
           {differentials}

@@ -28,7 +28,7 @@ function Differentials({ content }: any) {
             justifyContent="center"
             alignItems="center"
           >
-            <img width={50} height={50} src={item.icon} />
+            <img alt="diferencias em vendas de produtos orgânicos" width={50} height={50} src={item.icon} />
           </Box>
           <Typography textAlign="center" p="5px" variant="h5" color="#7a7a7a">
             {item.title}
@@ -36,7 +36,7 @@ function Differentials({ content }: any) {
         </Box>
       ))
     )
-  }, [])
+  }, [top,bottom])
 
   return (
     <Box pt="4px" mt="40px" mb="24px">
@@ -93,7 +93,7 @@ function Differentials({ content }: any) {
                     justifyContent="center"
                     alignItems="center"
                   >
-                    <img width={50} height={50} src={item.icon} />
+                    <img alt="diferencias em vendas de produtos orgânicos" width={50} height={50} src={item.icon} />
                   </Box>
                   <Typography
                     p="5px"
@@ -135,7 +135,7 @@ function Differentials({ content }: any) {
                     justifyContent="center"
                     alignItems="center"
                   >
-                    <img width={50} height={50} src={item.icon} />
+                    <img alt="diferencias em vendas de produtos orgânicos" width={50} height={50} src={item.icon} />
                   </Box>
                   <Typography
                     p="5px"

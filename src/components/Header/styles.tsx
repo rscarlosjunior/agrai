@@ -89,8 +89,6 @@ export function HeaderItem({ pathname, name }: any) {
 
   function isActived() {
     const path = location.pathname
-    console.log(pathname)
-    console.log(path)
     if (path === pathname) {
       setActive(true)
       return

@@ -67,7 +67,7 @@ function Slogan({
         )}
       </Box>
       <Box width={{ xs: '100%', md: '50%' }}>
-        <img alt="Agrai" src={img} width="100%" />
+        <img alt="Plantação orgânica e vendas" src={img} width="100%" />
       </Box>
     </Box>
   )
