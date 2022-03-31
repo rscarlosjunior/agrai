@@ -15,7 +15,7 @@ function HowItWorksBox({ content }: any) {
         mb="16px"
         mt="32px"
       >
-        <Typography variant="h4" fontWeight="300" color="#7a7a7a">
+        <Typography variant="h4" fontWeight="300" color="#000000">
           Como funciona:
         </Typography>
       </Box>
@@ -71,7 +71,7 @@ function HowItWorksBox({ content }: any) {
                 <Typography
                   textAlign="center"
                   fontWeight="300"
-                  color="#7a7a7a"
+                  color="#000000"
                   variant="h5"
                 >
                   {item.title}
@@ -79,7 +79,7 @@ function HowItWorksBox({ content }: any) {
                 <Typography
                   textAlign="center"
                   fontWeight="300"
-                  color="#7a7a7a"
+                  color="#000000"
                   variant="subtitle1"
                 >
                   {item.description}
@@ -87,7 +87,7 @@ function HowItWorksBox({ content }: any) {
               </Box>
             </Box>
             {!item.last && (
-              <Box color="#cdcdcd">
+              <Box color="#000000">
                 <ArrowRightAlt width={1} height="20px" />
               </Box>
             )}

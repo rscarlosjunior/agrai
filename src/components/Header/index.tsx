@@ -3,6 +3,7 @@ import { Hcontent, IconSpacing, IconWrapper, HeaderItem } from './styles'
 import { useMediaQuery } from '@mui/material'
 import StyledButton from '@/components/StyledButton'
 import { Link } from 'react-router-dom'
+import SocialMedia from '../SocialMedia'
 
 export function Header() {
   const xs = useMediaQuery('(max-width:797px)')
@@ -32,14 +33,12 @@ export function Header() {
                 name={item.name}
               />
             ))}
-            {xs && (
-              <Link to="/blog">
-                <HeaderItem pathname="/x" name="Blog" />
-              </Link>
-            )}
+            <Link to="/blog">
+              <HeaderItem pathname="/x" name="Blog" />
+            </Link>
           </IconSpacing>
         </IconWrapper>
-        {!xs && <StyledButton icon="🍃" description="BLOG" />}
+        {!xs && <SocialMedia color="black"/>}
       </>
     </Hcontent>
   )

@@ -49,7 +49,7 @@ function Differentials({ content }: any) {
         alignItems="center"
         mb="16px"
       >
-        <Typography variant="h4" fontWeight="300" color="#7a7a7a">
+        <Typography variant="h4" fontWeight="300" color="#000000">
           Nossos diferenciais:
         </Typography>
       </Box>
@@ -99,7 +99,7 @@ function Differentials({ content }: any) {
                     p="5px"
                     textAlign="center"
                     fontWeight="300"
-                    color="#7a7a7a"
+                    color="#000000"
                     variant="h5"
                   >
                     {item.title}
@@ -141,7 +141,7 @@ function Differentials({ content }: any) {
                     p="5px"
                     textAlign="center"
                     fontWeight="300"
-                    color="#7a7a7a"
+                    color="#000000"
                     variant="h5"
                   >
                     {item.title}

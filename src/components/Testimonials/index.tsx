@@ -16,7 +16,7 @@ function Testimonials({ content }: any) {
         mb="20px"
         mt="40px"
       >
-        <Typography variant="h4" fontWeight="300" color="#7a7a7a">
+        <Typography variant="h4" fontWeight="300" color="#000000">
           Depoimentos:
         </Typography>
       </Box>

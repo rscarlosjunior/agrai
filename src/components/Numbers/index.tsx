@@ -14,7 +14,7 @@ function Numbers({ content }: any) {
         mt="40px"
         mb="16px"
       >
-        <Typography variant="h4" fontWeight="300" color="#7a7a7a">
+        <Typography variant="h4" fontWeight="300" color="#000000">
           Agrai em números:
         </Typography>
       </Box>
@@ -44,18 +44,18 @@ function Numbers({ content }: any) {
               justifyContent="center"
               alignItems="center"
               variant="h1"
-              color="#4fb849"
+              color="#fe7500"
             >
               {item.value}
-              <Typography display="flex" variant="h3" color="#7a7a7a">
+              <Typography display="flex" variant="h3" color="#fe7500">
                 +
               </Typography>
             </Typography>
             <Box display="flex" flexDirection="column" alignItems="center">
-              <Typography variant="h5" color="#7a7a7a">
+              <Typography variant="h5" color="#000000">
                 {item.title}
               </Typography>
-              <Typography variant="h5" color="#7a7a7a">
+              <Typography variant="h5" color="#000000">
                 {item.description}
               </Typography>
             </Box>
