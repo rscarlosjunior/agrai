@@ -7,6 +7,7 @@ function EmptyGrayspace({
   RightTitle,
   RightSubtitle,
   leftTitle,
+  icons,
   RightDescription
 }: IEmptyGrayspace) {
   return (
@@ -40,8 +41,11 @@ function EmptyGrayspace({
               <Typography variant="h3" pt={{xs:'16px', md:'unset'}}  textAlign="center" color="black">
                 {RightTitle}
               </Typography>
-              <Typography variant="h5" pt='16px' margin="auto" maxWidth={350} textAlign="center" color="#7a7a7a">
+              <Typography variant="h5" pt='16px' margin="auto" maxWidth={350} textAlign="left" color="#7a7a7a">
                 {RightSubtitle}
+                <Box mt="16px">
+                  {icons}
+                </Box>
               </Typography>
             </>
           ) : (

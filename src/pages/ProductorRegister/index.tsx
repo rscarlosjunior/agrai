@@ -1,12 +1,11 @@
 import React from 'react'
 import { Header } from '@/components/Header'
 import { Container, Template } from '@/styles/styles'
-import { Newsletter } from '@/components/Newsletter'
 import { Footer } from '@/components/Footer'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Box, Typography } from '@mui/material'
-
 import RegisterForm from '@/components/RegisterForm'
+
 
 export const ProductorRegister: React.FC = () => {
   return (
@@ -19,23 +18,24 @@ export const ProductorRegister: React.FC = () => {
           <Box
             maxWidth="966px"
             margin="auto"
+            minHeight="calc(100vh - 349px)"
             display="flex"
             width="100%"
-            justifyContent="flex-start"
-            alignItems="center"
-            mt="16px"
+            justifyContent="space-between"
+            alignItems="flex-start"
+            mt="32px"
             flexDirection={{ xs: 'column-reverse', md: 'row' }}
           >
-            <Box width={{ xs: '100%', md: '50%' }}>
-              <img alt="Produtor Orgânico" src="https://i.imgur.com/G3wv9Ac.png" width="100%" />
+            <Box width={{ xs: '100%', md: '49%' }}>
+              <img alt="Produtor Orgânico" src="https://i.imgur.com/740aSxS.jpg" width="100%" />
             </Box>
             <Box
               display="flex"
-              width={{ xs: '100%', md: '50%' }}
+              width={{ xs: '100%', md: '49%' }}
               flexDirection="column"
               justifyContent="center"
             >
-              <Box display={{ xs: 'none', md: 'flex' }}>
+              <Box>
                 <Typography
                   width="100%"
                   textAlign="center"
@@ -57,18 +57,17 @@ export const ProductorRegister: React.FC = () => {
                 commodo veniam.
               </Typography>
               <Box
-                mt="16px"
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
                 flexDirection="column"
               >
-                <RegisterForm />
+              {/* id set how form the client gonna render */}
+                <RegisterForm id={8}/>
               </Box>
             </Box>
           </Box>
         </Container>
-        <Newsletter />
         <Footer />
       </Template>
     </>

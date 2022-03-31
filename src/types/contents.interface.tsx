@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface IContents {
     about?: {
         slogan: ISlogan
@@ -22,5 +24,6 @@ export interface IContents {
     RightTitle?:string,
     RightSubtitle?:string,
     leftTitle?:string,
+    icons?: React.ReactNode
     RightDescription?:string
   }

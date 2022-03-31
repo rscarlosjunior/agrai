@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { Header } from '@/components/Header'
 import { Container, Template } from '@/styles/styles'
-import { Newsletter } from '@/components/Newsletter'
 import { Footer } from '@/components/Footer'
 import { Box } from '@mui/material'
 import { usePrismic } from '@/hooks/usePrismic'
@@ -78,7 +77,6 @@ export const Agrai: React.FC = () => {
           {differentials}
           {testimonials}
         </Container>
-        <Newsletter />
         <Footer />
       </Template>
     </>

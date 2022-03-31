@@ -27,6 +27,14 @@ export function whatsapp() {
   window.location.href =
     'https://api.whatsapp.com/send?phone=5527999096496&text=Bom dia'
 }
+export function linkedin() {
+  window.location.href =
+  'https://www.linkedin.com/company/agraibrasil/'
+}
+export function instagram() {
+  window.location.href =
+  'https://www.instagram.com/agraibrasil/'
+}
 
 export function filterDatas(type, content) {
   const filter = content.filter((item) => item.type === type)

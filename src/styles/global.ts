@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
     display:flex;
     min-height: 100vh;
     position: relative;
+    background-color: white;
   }
 
   body {

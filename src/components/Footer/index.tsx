@@ -6,14 +6,11 @@ import {
   Faddress,
   Wrapper,
   Fbackground,
-  Fbutton,
-  FbuttonIcon,
-  FbuttonWrapper,
   Fimagewrapper
 } from './styles'
-import EmailIcon from '@mui/icons-material/Email'
-import HeadphonesIcon from '@mui/icons-material/Headphones'
-import { whatsapp } from '@/pages/utils'
+import { Box } from '@mui/material'
+import SocialMedia from '../SocialMedia'
+import RegisterForm from '../RegisterForm'
 
 export const Footer = () => {
 
@@ -27,29 +24,26 @@ export const Footer = () => {
           <Faddress>Santa Lúcia, ES</Faddress>
           <Faddress>contato@agrai.com.br</Faddress>
           <Faddress>+55 27 9971-2369</Faddress>
+          <Box>
+            <Line />
+            <Box mt="8px">
+              <Box mb="8px">
+                <Ftitle>Entrem em contato:</Ftitle>
+              </Box>
+              <SocialMedia color='white'/>
+            </Box>
+          </Box>
         </Wrapper>
-
-        <FbuttonWrapper>
-          <Fbutton onClick={() => whatsapp()}>
-            <FbuttonIcon>
-              <EmailIcon />
-            </FbuttonIcon>
-            Entre em Contato
-          </Fbutton>
-          <Fbutton>
-            <FbuttonIcon>
-              <HeadphonesIcon />
-            </FbuttonIcon>
-            Saiba Mais
-          </Fbutton>
-        </FbuttonWrapper>
         <Fimagewrapper>
-          <img
-            height="45"
-            alt="logo"
-            width="100"
-            src="https://imgur.com/dBwKZVv.png"
-          />
+          <Box mt="12px" mb="12px">
+            <img
+              height="45"
+              alt="logo"
+              width="100"
+              src="https://imgur.com/dBwKZVv.png"
+            />
+          </Box>
+          <RegisterForm id={10}/>
         </Fimagewrapper>
       </Fwrapper>
     </Fbackground>

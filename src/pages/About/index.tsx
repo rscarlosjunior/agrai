@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { Header } from '@/components/Header'
 import { Container, Template } from '@/styles/styles'
-import { Newsletter } from '@/components/Newsletter'
 import { Footer } from '@/components/Footer'
 import Slogan from '@/components/Slogan'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
@@ -10,6 +9,7 @@ import Testimonials from '@/components/Testimonials'
 import { filterDatas, variables } from '@/pages/utils'
 import EmptyGrayspace from '@/components/EmptyGrayspace'
 import { usePrismic } from '@/hooks/usePrismic'
+import SocialMedia from '@/components/SocialMedia'
 
 export const About: React.FC = () => {
   const { results } = usePrismic()
@@ -61,10 +61,10 @@ export const About: React.FC = () => {
           <EmptyGrayspace
             img="https://i.imgur.com/Gnwx3QB.png"
             RightTitle="Faça parte desta conexão"
+            icons={<SocialMedia color="black"/>}
             RightSubtitle="Commodo et non duis est aliquip dolore exercitation elit in duis occaecat occaecat ut."
           />
         </Container>
-        <Newsletter />
         <Footer />
       </Template>
     </>

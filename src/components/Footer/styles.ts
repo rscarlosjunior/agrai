@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Fbackground = styled.div`
   background-color: black;
+  margin-top: 32px;
   display: flex;
   justify-content: center;
 `
@@ -16,13 +17,12 @@ export const Fwrapper = styled.div`
   }
   max-width: 966px;
   width: 100%;
-  margin-bottom:20px;
+  margin-bottom: 26px;
 `
 export const Ftitle = styled.span`
   font-size: 20px;
   font-weight: bold;
   color: #ffffff;
-  margin-top: 20px;
 `
 export const Faddress = styled.span`
   font-size: 13px;
@@ -33,8 +33,9 @@ export const Faddress = styled.span`
 `
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
+  margin-top: 20px;
 `
 
 export const Line = styled.hr`
@@ -42,7 +43,7 @@ export const Line = styled.hr`
   height: 5px;
   background-color: white;
   opcaity: 0.5;
-  margin: 16px 0 20px 0;
+  margin: 16px 0 0 0;
 `
 export const FbuttonWrapper = styled.div`
   display: flex;
@@ -61,6 +62,7 @@ export const FbuttonWrapper = styled.div`
 export const Fimagewrapper = styled.div`
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   display: flex;
   margin-bottom: 20px;
 `
