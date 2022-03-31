@@ -43,7 +43,7 @@ export const Footer = () => {
               src="https://imgur.com/dBwKZVv.png"
             />
           </Box>
-          <RegisterForm id={10}/>
+          <RegisterForm id={11}/>
         </Fimagewrapper>
       </Fwrapper>
     </Fbackground>
