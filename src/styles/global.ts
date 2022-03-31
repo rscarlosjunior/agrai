@@ -56,7 +56,7 @@ const GlobalStyles = createGlobalStyle`
     box-shadow: none;
 
     /* tannat / default */
-    border-color: #c81a78 !important;
+    border-color: rgb(80, 184, 72) !important;
   }
 `
 
