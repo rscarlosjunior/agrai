@@ -39,7 +39,7 @@ function Differentials({ content }: any) {
   }, [top,bottom])
 
   return (
-    <Box pt="4px" mt="40px" mb="24px">
+    <Box pt="4px" mt="40px" mb="24px" pt="32px" pb="32px" bgcolor="#f6f6f6">
       <Box
         maxWidth="966px"
         margin="auto"
@@ -49,7 +49,7 @@ function Differentials({ content }: any) {
         alignItems="center"
         mb="16px"
       >
-        <Typography variant="h4" fontWeight="300" color="#000000">
+        <Typography variant="h4" fontWeight="bold" color="#000000">
           Nossos diferenciais:
         </Typography>
       </Box>

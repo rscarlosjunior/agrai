@@ -16,7 +16,7 @@ input {
   padding: unset !important;
 }
 #_form_62453C6957805_ ._form-thank-you {
-  color: white;
+  color: black;
 }
 
 #_form_6245138061055_ ._form-label,
@@ -33,5 +33,9 @@ input {
   #_form_62452286B8EFC_ ._x84457384 label,
   #_form_62452286B8EFC_ ._field2 label {
     text-align: center !important;
+  }
+
+  #_form_624617EEE942F_ .field5 input, #_form_624617EEE942F_ ._field3 input, #_form_624617EEE942F_ ._field4 input, #_form_624617EEE942F_ ._x28264061 input, #_form_624617EEE942F_ ._x84457384 input, #_form_624617EEE942F_ ._field2 input {
+    width: 280px !important;
   }
 }

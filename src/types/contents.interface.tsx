@@ -9,6 +9,7 @@ export interface IContents {
     },
   }
   export interface ISlogan {
+    bg?:string,
     title_mobile: string,
     title_desk: string,
     description:string,

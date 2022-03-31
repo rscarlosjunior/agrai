@@ -54,6 +54,7 @@ export const Agrai: React.FC = () => {
             <Header />
           </Box>
           <Slogan
+            bg="#f6f6f6"
             buttons={true}
             firstButton='Quero comprar'
             firstButtonLink='/cadastro-produtor'

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Fbackground = styled.div`
-  background-color: black;
+  background-color: #f6f6f6;
   margin-top: 32px;
   display: flex;
   justify-content: center;
@@ -22,14 +22,14 @@ export const Fwrapper = styled.div`
 export const Ftitle = styled.span`
   font-size: 20px;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000a1;
 `
 export const Faddress = styled.span`
   font-size: 13px;
   font-weight: bold;
   margin: 5px 0 5px 0;
-  color: white;
-  line-height: #ffffff;
+  color: #000000a1;
+  line-height: #000000a1;
 `
 export const Wrapper = styled.div`
   display: flex;
@@ -41,7 +41,7 @@ export const Wrapper = styled.div`
 export const Line = styled.hr`
   width: 50px;
   height: 5px;
-  background-color: white;
+  background-color: #000000a1;
   opcaity: 0.5;
   margin: 16px 0 0 0;
 `

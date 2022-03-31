@@ -14,7 +14,7 @@ function Numbers({ content }: any) {
         mt="40px"
         mb="16px"
       >
-        <Typography variant="h4" fontWeight="300" color="#000000">
+        <Typography variant="h4" fontWeight="bold" color="#000000">
           Agrai em números:
         </Typography>
       </Box>

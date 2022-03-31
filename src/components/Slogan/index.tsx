@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import StyledButton from '../StyledButton'
 
 function Slogan({
+  bg = 'white',
   img,
   firstButton,
   firstButtonLink,
@@ -16,6 +17,7 @@ function Slogan({
   title_mobile
 }: ISlogan) {
   return (
+    <Box width="100%" bgcolor={bg}>
     <Box
       maxWidth="966px"
       margin="auto"
@@ -23,7 +25,8 @@ function Slogan({
       width="100%"
       justifyContent="center"
       alignItems="center"
-      mt="16px"
+      padding-top="32px"
+      padding-bottom="16px"
       flexDirection={{ xs: 'column-reverse', md: 'row' }}
     >
       <Box
@@ -54,6 +57,7 @@ function Slogan({
             display="flex"
             justifyContent={{ xs: 'center', md: 'flex-start' }}
             mt="16px"
+            mb={{xs:"32px"}}
           >
             <Box mr="8px">
               <Link style={{ textDecoration: 'none' }} to={firstButtonLink}>
@@ -66,9 +70,10 @@ function Slogan({
           </Box>
         )}
       </Box>
-      <Box width={{ xs: '100%', md: '50%' }}>
+      <Box mt={{xs:'32px'}} width={{ xs: '100%', md: '50%' }}>
         <img alt="Plantação orgânica e vendas" src={img} width="100%" />
       </Box>
+    </Box>
     </Box>
   )
 }

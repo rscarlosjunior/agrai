@@ -30,7 +30,7 @@ export const Footer = () => {
               <Box mb="8px">
                 <Ftitle>Entrem em contato:</Ftitle>
               </Box>
-              <SocialMedia color='white'/>
+              <SocialMedia color='#000000a1'/>
             </Box>
           </Box>
         </Wrapper>

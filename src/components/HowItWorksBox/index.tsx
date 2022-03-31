@@ -1,10 +1,16 @@
 import { ArrowRightAlt } from '@mui/icons-material'
 import { Box, Typography } from '@mui/material'
 import React from 'react'
+import { BoxWithShadow } from './styles'
 
 function HowItWorksBox({ content }: any) {
   return (
-    <>
+    <Box width="100%" pt='32px' pb='32px' style={{
+      backgroundImage: "url('https://i.imgur.com/kGb6DIy.png')",
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat'
+    }}>
       <Box
         maxWidth="966px"
         margin="auto"
@@ -13,9 +19,8 @@ function HowItWorksBox({ content }: any) {
         justifyContent='flex-start'
         alignItems="center"
         mb="16px"
-        mt="32px"
       >
-        <Typography variant="h4" fontWeight="300" color="#000000">
+        <Typography variant="h4" fontWeight="bold" color="#000000">
           Como funciona:
         </Typography>
       </Box>
@@ -26,19 +31,19 @@ function HowItWorksBox({ content }: any) {
         width="100%"
         justifyContent="space-between"
         alignItems="center"
-        overflow="auto hidden"
+        overflow={{xs:"auto hidden", md:'unset'}}
       >
         {content.map((item, index) => (
           <>
-            <Box
+            <BoxWithShadow
               key={index}
               minWidth={180}
               maxWidth={180}
               minHeight={260}
               maxHeight={260}
               padding="16px"
-              bgcolor="transparent"
-              border="1px solid #4FB862"
+              bgcolor="white"
+              border="1px dashed rgb(80, 184, 72)"
               borderRadius="5px"
               display="flex"
               flexDirection="column"
@@ -50,7 +55,7 @@ function HowItWorksBox({ content }: any) {
             >
               <Box
                 width="100%"
-                mb="36px"
+                mb="16px"
                 display="flex"
                 justifyContent="center"
               >
@@ -70,9 +75,10 @@ function HowItWorksBox({ content }: any) {
               >
                 <Typography
                   textAlign="center"
-                  fontWeight="300"
+                  fontWeight="bold"
                   color="#000000"
                   variant="h5"
+                  mb="8px"
                 >
                   {item.title}
                 </Typography>
@@ -85,7 +91,7 @@ function HowItWorksBox({ content }: any) {
                   {item.description}
                 </Typography>
               </Box>
-            </Box>
+            </BoxWithShadow>
             {!item.last && (
               <Box color="#000000">
                 <ArrowRightAlt width={1} height="20px" />
@@ -94,7 +100,7 @@ function HowItWorksBox({ content }: any) {
           </>
         ))}
       </Box>
-    </>
+    </Box>
   )
 }
 
