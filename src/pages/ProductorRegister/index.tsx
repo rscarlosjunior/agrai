@@ -53,8 +53,7 @@ export const ProductorRegister: React.FC = () => {
                 typography="h5"
                 color="#7a7a7a"
               >
-                Aliqua culpa labore aliquip ea dolor nostrud sit non elit
-                commodo veniam.
+                Cadastre-se para fazer parte da nossa rede de produtores
               </Typography>
               <Box
                 display="flex"

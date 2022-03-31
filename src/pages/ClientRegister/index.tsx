@@ -53,8 +53,7 @@ export const ClientRegister: React.FC = () => {
                 typography="h5"
                 color="#7a7a7a"
               >
-                Aliqua culpa labore aliquip ea dolor nostrud sit non elit
-                commodo veniam.
+                Fale com um dos nossos especialistas e tenha os melhores produtos no seu estabelecimento.
               </Typography>
               <Box
                 display="flex"
