@@ -5,7 +5,7 @@ import { BoxWithShadow } from './styles'
 
 function HowItWorksBox({ content }: any) {
   return (
-    <Box width="100%" pt='32px' pb='32px' style={{
+    <Box width="100%" pt='32px' pb='60px' style={{
       backgroundImage: "url('https://i.imgur.com/kGb6DIy.png')",
       backgroundPosition: 'center',
       backgroundSize: 'cover',

@@ -23,7 +23,17 @@ input {
 #_form_6245138061055_ ._form_element ._form-label {
   font-size: 12px !important;
 }
+
+.full-width {
+  width: 100%;
+}
+
 @media screen and (max-width: 797px) {
+  
+  .full-width {
+    width: unset;
+  }
+
   #_form_62452286B8EFC_ ._field8 label,
   #_form_62452286B8EFC_ ._field3 label,
   #_form_62452286B8EFC_ ._field4 label,
@@ -35,7 +45,7 @@ input {
     text-align: center !important;
   }
 
-  #_form_62476A2931A5A_ ._x84457384 input {
-    width: 280px !important;
+  #register-form input {
+    width: 75vw !important;
   }
 }

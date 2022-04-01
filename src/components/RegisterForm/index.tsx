@@ -17,14 +17,13 @@ function RegisterForm({id}:RegisterFormProps) {
   }, [])
 
   return (
-    <>
+    <div className="full-width" id="register-form">
     {!xs ? (
       <div style={{width: '100%'}} className={`_form_${id}`}></div>
     ): (
       <div style={{width: '100%', marginBottom: '32px'}} className={`_form_${id}`}></div>
     )}
-      
-    </>
+    </div>
   )
 }
 
